@@ -16,7 +16,7 @@ const TodoForm = (props) => {
                   <Field name='body' placeholder='Add task'/>
                   <ErrorMessage name="body" component='div'  />
                 </label>
-                <input type='submit' value='Add' />
+                  <input type='submit' value='Add' />
               </Form>
             )
            

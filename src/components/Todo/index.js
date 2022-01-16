@@ -1,5 +1,6 @@
 import React from 'react';
-import useTodo from '../../hooks/useTodo';
+import { useTodo, useFilter } from '../../hooks';
+import FilterList from './FilterList';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
@@ -11,11 +12,13 @@ const Todo = () => {
     }
   ]);
 
+  const {filter, filterTasks} = useFilter();
+
   return (
     <section>
       <TodoForm addTask={addTask}/>
-      <TodoList tasks={tasks} setDoneTask={setDoneTask} deleteTask={deleteTask}/>
-
+      <FilterList filterTasks={filterTasks}/>
+      <TodoList filter={filter} tasks={tasks} setDoneTask={setDoneTask} deleteTask={deleteTask}/>
     </section>
   );
 }

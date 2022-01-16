@@ -1,13 +1,14 @@
 import React from 'react';
+import { renderArr } from '../../Filter';
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
-  const { tasks, setDoneTask, deleteTask } = props;
+  const {filter, tasks, setDoneTask, deleteTask } = props;
 
   return (
     <ul>
       { 
-        tasks.map((task)=> <TodoItem key={task.id} task={task} setDoneTask={setDoneTask} deleteTask={deleteTask} />)
+        renderArr(filter, tasks).map((task)=> <TodoItem key={task.id} task={task} setDoneTask={setDoneTask} deleteTask={deleteTask} />)
       }
     </ul>
   );
