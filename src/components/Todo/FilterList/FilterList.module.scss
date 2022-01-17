@@ -1,0 +1,28 @@
+@import "/src/common/styles/templates";
+@import "/src/common/styles/variables";
+
+.wrapper{
+  display: inline-block;
+  background: -webkit-linear-gradient(90deg, $whiteColor 71%, $accentColor 71%);
+  background: -moz-linear-gradient(90deg, $whiteColor  71%, $accentColor 71%);
+  background: linear-gradient(90deg, $whiteColor  71%, $accentColor 71%);
+}
+
+.filter{
+  @extend %input;
+  width: 10rem;
+  padding-right: $padding;
+  cursor: pointer;
+  background-color: inherit;
+  background-image: url(../../../../public/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 7rem center;
+  background-size: 30%, 25%, 25%;
+  appearance:none;
+}
+
+
+
+ 
+
+

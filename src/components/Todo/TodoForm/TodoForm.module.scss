@@ -1,0 +1,36 @@
+@import "/src/common/styles/variables";
+@import "/src/common/styles/templates";
+
+
+.form{
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.input{
+  @extend %input;
+  width: $width;
+  @media screen and (max-width: $xs){
+    width:  100%;
+  }
+  
+ }
+
+.error{
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: $errColor;
+}
+
+.btn{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 20%;
+  right: 1rem;
+  color: $accentColor;
+}

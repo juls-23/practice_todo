@@ -1,0 +1,32 @@
+@import "/src/common/styles/templates";
+@import "/src/common/styles/variables";
+@import "/src/common/styles/breakpoints";
+
+.taskWrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.task{
+  @extend %input;
+  width: $width;
+  @media screen and (max-width: $sm){
+    width:  12rem;
+  }
+}
+
+.done{
+  text-decoration: line-through;
+  background-color: $taskDoneColor;
+}
+
+.delBtn{
+  @extend %btn;
+  background-color: $accentColor;
+}
+
+.checkedBtn{
+  @extend %btn;
+  background-color: $secondColor;
+}

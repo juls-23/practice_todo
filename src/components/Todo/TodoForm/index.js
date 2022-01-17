@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './TodoForm.module.scss';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { TODO_LIST_SCHEMA } from '../../../utilits/validationShema';
 
@@ -11,12 +13,12 @@ const TodoForm = (props) => {
         {
           (formikProps) => {
             return (
-              <Form>
+              <Form className={styles.form}>
                 <label>
-                  <Field name='body' placeholder='Add task'/>
-                  <ErrorMessage name="body" component='div'  />
+                  <Field name='body' placeholder='Add task' className={styles.input} />
+                  <ErrorMessage name="body" component='div' className={styles.error} />
                 </label>
-                  <input type='submit' value='Add' />
+                  <button type='submit' className={styles.btn}> <AddCircleIcon /> </button>
               </Form>
             )
            

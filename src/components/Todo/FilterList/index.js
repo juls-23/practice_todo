@@ -1,19 +1,18 @@
 import React from 'react';
-import NativeSelect from '@material-ui/core/NativeSelect'
+import styles from './FilterList.module.scss';
 import CONSTANTS from '../../../constants';
 const { LIST_VALUES } = CONSTANTS;
+
 
 const FilterList = (props) => {
   const {filterTasks} = props;
 
   return (
-    <>
-      <NativeSelect name='status' onChange={filterTasks} >
-          {Object.values(LIST_VALUES).map((el, index)=><option key={index} value={el}>{el}</option>) }
-      </NativeSelect>
-     
-
-    </> 
+    <div className={styles.wrapper}>
+      <select name='status' onChange={filterTasks} className={styles.filter}>
+        {Object.values(LIST_VALUES).map((el, index)=><option key={index} value={el}>{el}</option>) } 
+      </select>
+    </div> 
   );
 }
 

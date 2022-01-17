@@ -1,0 +1,19 @@
+@import './variables';
+@import './breakpoints';
+
+%borderNone{
+  border: none;
+}
+
+%input{
+  @extend %borderNone;
+  padding: 0.8rem;
+  background-color: $whiteColor;
+}
+
+%btn{
+  @extend %borderNone;
+  width: $padding;
+  color: $whiteColor;
+}
+
